@@ -1,0 +1,60 @@
+header.header
+    //- NAVBAR
+    nav.navbar.navbar-expand-lg.navbar-dark.fixed-top.scrolling-navbar
+        .container
+            a.navbar-brand.logo(href="#")
+                img.logo__image.logo__image--show(src="./assets/img/logo/logo__black.png" title="СпецТрансСтрой" alt="logo")
+                img.logo__image.logo__image--hide(src="./assets/img/logo/logo__default.png", title="СпецТрансСтрой" alt="default logo")
+            a.navbar__mobile-phone(href="tel:+74956436363" title="Позвонить нам") +7 (495) 643-63-63
+            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation")
+                span.navbar-toggler__line
+            #basicExampleNav.collapse.navbar-collapse
+                ul.navbar-nav.mx-auto.smooth-scroll.navbar-nav--font-size
+                    li.nav-item
+                        a.nav-link.nav-link--color(href="#advantage" data-offset="90") Преимущества
+                    li.nav-item
+                        a.nav-link.nav-link--color(href="#vehicles" data-offset="90") Продукция
+                    li.nav-item
+                        a.nav-link.nav-link--color(href="#discount" data-offset="90") Акции
+                    li.nav-item
+                        a.nav-link.nav-link--color(href="#about" data-offset="90") О нас
+                    li.nav-item
+                        a.nav-link.nav-link--color(href="#footer" data-offset="30") Контакты
+                ul.navbar-nav.nav-flex-icons.navbar-nav-contact
+                    li.nav-item.nav-phone
+                        a.nav-link(href="tel:+74956436363" title="Позвонить нам") +7 (495) 643-63-63
+                    li.nav-item.nav-geolocation
+                        a.nav-link.ml-4.smooth-scroll(href="#footer")
+                            | #[i.fas.fa-map-marker-alt]
+    //- INTRO
+    #home.view.jarallax.header-main-content(data-jarallax='{"speed": 0.2}')
+        .mask.rgba-indigo-light
+            .container.h-100.d-flex.align-items-center
+                .row.smooth-scroll.header-intro.w-100
+                    .col-xl-8.col-lg-8.col-md-12.col-sm-12.col-12.text-left.header-main-content__info
+                        .text-white.wow.fadeInDown
+                            h1.header-main-content__title «СпецТрансСтрой»
+                            p.header-main-content__subtitle Добыча и реализация нерудных материалов
+                        a.btn.wow.fadeInUp.smooth-scroll.header-main-content__button(href="#advantage" data-wow-delay="0.2s") Подробнее
+                    .col-xl-4.col-lg-4.col-md-12.col-sm-12.col-12
+                        form.form-first-order#form-special-offer(name="form-special-offer")
+                            .card.card-image(style="background: #e31e24")
+                                .text-white.rgba-indigo-light.form-content-wrapper.z-depth-2
+                                    .text-center
+                                        h3.mb-5 #[strong НА ПЕРВЫЙ ЗАКАЗ] #[span.text-color-secondary #[strong СКИДКА 15%]]
+                                        span.form-subject.dn СКИДКА 15%
+                                    .md-form.offer__15
+                                        input.input_name.form-control.white-text(type="text" name="name" data-validate autocomplete="off")
+                                        label Имя
+                                    .md-form
+                                        input.input_tel.form-control.white-text(type="text" name="tel" data-validate autocomplete="off")
+                                        label Телефон
+                                    .form-check.mb-3
+                                        input.form-check-input(type="checkbox" name="privacyPolicy" id="initial-order-agree" required)
+                                        label.form-check-label.white-text.advantage-form__checklabel(for="initial-order-agree") Я согласен не обработку #[a.text-color-secondary(href="./assets/docs/personal_data.pdf" rel="nofollow noopener" target="_blank") персональных данных]
+                                    .row.d-flex.align-items-center
+                                        .text-center.pr-2.pl-2.col-md-12
+                                            .form__errors.mb-3
+                                            input(type="hidden" name="discountFirstOrder")
+                                            button.btn.btn-block.z-depth-1.waves-effect.waves-light.form-first-order__button.form-submit(type="submit" disabled) Получить
+                                            input(type="hidden" name="recaptcha_response" id="discount-first-order")

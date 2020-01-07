@@ -1,0 +1,85 @@
+:root {
+    @include font-size($base-font-size, null, 320px, 1200px);
+}
+
+html {
+	font-family: $font-family-futurapt-book;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+	font-family: $font-family-futurapt-book;
+	font-size: $base-font-size;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, 
+body, 
+header,  
+.jarallax {
+	height: 100%;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	font-family: $font-family-futurapt;
+    font-weight: $font-weight-black;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+a {
+	-webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+button {
+    cursor: pointer;
+}
+
+.dn {
+    display: none !important;
+}
+
+.text-color-secondary {
+    color: $first-yellow;
+}
+.md-form label {
+    color: $white;
+}
+.md-form input[type=text]:focus:not([readonly]) {
+    -webkit-box-shadow: 0 1px 0 0 $second-yellow;
+    box-shadow: 0 1px 0 0 $second-yellow;
+    border-bottom: 1px solid $second-yellow;
+}
+.md-form input[type=date]:focus:not([readonly])+label,
+.md-form input[type=datetime-local]:focus:not([readonly])+label,
+.md-form input[type=email]:focus:not([readonly])+label,
+.md-form input[type=number]:focus:not([readonly])+label,
+.md-form input[type=password]:focus:not([readonly])+label,
+.md-form input[type=search-md]:focus:not([readonly])+label,
+.md-form input[type=search]:focus:not([readonly])+label,
+.md-form input[type=tel]:focus:not([readonly])+label,
+.md-form input[type=text]:focus:not([readonly])+label,
+.md-form input[type=time]:focus:not([readonly])+label,
+.md-form input[type=url]:focus:not([readonly])+label,
+.md-form textarea.md-textarea:focus:not([readonly])+label {
+    color: $second-yellow
+}
+
+.form-check-input[type=checkbox]:checked+label:before, label.btn input[type=checkbox]:checked+label:before {
+    border-right: 2px solid $first-yellow;
+    border-bottom: 2px solid $first-yellow;
+}
