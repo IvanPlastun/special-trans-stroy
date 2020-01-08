@@ -21,6 +21,10 @@ header,
 	height: 100%;
 }
 
+html a:hover {
+    color: $first-yellow;
+}
+
 h1, 
 h2, 
 h3, 
@@ -82,4 +86,19 @@ button {
 .form-check-input[type=checkbox]:checked+label:before, label.btn input[type=checkbox]:checked+label:before {
     border-right: 2px solid $first-yellow;
     border-bottom: 2px solid $first-yellow;
+}
+
+.highlight {
+    color: $first-yellow;
+}
+
+.text-color-primary {
+    color: $dark-blue;
+}
+.text-color-secondary {
+    color: $first-yellow;
+}
+
+.form-check a:hover {
+    opacity: .65;
 }
