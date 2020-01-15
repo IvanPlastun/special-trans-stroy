@@ -83,3 +83,31 @@ button {
     border-right: 2px solid $first-yellow;
     border-bottom: 2px solid $first-yellow;
 }
+
+.text-color-primary {
+    color: $first-yellow;
+}
+
+.pc {
+    color: $first-yellow;
+}
+
+.sc {
+    color: #515254 !important;
+}
+
+.discount {
+    @include font-size(2em);
+}
+
+.btn.btn-primary {
+    background-color: $first-yellow !important;
+    color: $black;
+    font-weight: 700;
+    padding: 1em 4em;
+
+    &:hover {
+        background-color: $black!important;
+        color: $first-yellow;
+    }
+}

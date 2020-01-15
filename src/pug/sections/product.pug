@@ -1,0 +1,9 @@
+section.product
+    .container
+        h2.product__title.wow.fadeIn(data-wow-delay="0.2s") Наша #[span.pc продукция]
+        p.product__subtitle Добывается в карьере «Чаль»
+        .col-md-12.pl-0.pr-0
+            .nav-filter-wrapper
+                +filterProducts(filterInfo)
+        .tab-content.col-12.pt-0.pr-0.pl-0.pb-0
+            +productCards(cardsData)
