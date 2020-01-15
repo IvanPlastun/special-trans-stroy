@@ -1,0 +1,50 @@
+.feedback {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("../assets/img/backgrounds/crushed-stones.jpg") no-repeat center center;
+    background-size: cover;
+    @include section-indents(5em, 0em);
+    
+    @media (min-width: 1200px) {
+        @include section-indents(7em, 1em);
+    }
+
+    &__title {
+        @include font-size(2.5em);
+        color: $white;
+    }
+    &__subtitle {
+        @include font-size(1.3em);
+        color: $white;
+        margin-bottom: 2em;
+    }
+}
+
+.feedback .md-form .feedback__label {
+    color: $first-yellow;
+}
+
+.feedback__input {
+    color: #c8c8c8 !important;
+
+    &:focus {
+        color: $white !important;
+    }
+}
+
+.form-check-label a:hover {
+    opacity: .65;
+}
+
+.feedback-form-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.feedback-contact-form {
+    max-width: 380px;
+
+    &-content {
+        background-color: #464543;
+        color: $white;
+        padding: 3.2em 1.5em;
+    }
+}
