@@ -9,6 +9,8 @@ import images from "./gulp-tasks/images"
 import fonts from "./gulp-tasks/fonts"
 import compilePug from "./gulp-tasks/pug"
 import copyLibsLocal from "./gulp-tasks/copyLibsLocal"
+import copyFiles from "./gulp-tasks/copyFiles"
+
 
 const paths = {
     src: {
@@ -18,7 +20,11 @@ const paths = {
         images: "./src/assets/img/**/*.{jpg,jpeg,png,gif,tiff,svg}",
         svg: "./src/assets/img/svg/**/*.svg",
         fonts: "./src/assets/fonts/**/*.{eot,ttf,otf,woff,woff2}",
-        libs: "./src/libs/**/*.*"
+        libs: "./src/libs/**/*.*",
+        files: {
+            docs: "./src/assets/docs/*.*",
+            img: "./src/libs/img/**/*.*"
+        }
     },
     dist: {
         clean: "./dist",
@@ -28,7 +34,11 @@ const paths = {
         images: "./dist/assets/img",
         svg: "./dist/assets/img/svg-sprites",
         fonts: "./dist/assets/fonts",
-        libs: "./dist/libs/"
+        libs: "./dist/libs/",
+        files: {
+            docs: "./dist/assets/docs", 
+            img: "./dist/libs/img"
+        }
     },
     watch: {
         pug: "./src/pug/**/*.pug",
@@ -43,13 +53,13 @@ const paths = {
 export { paths }
 
 export const development = gulp.series(clean,
-    gulp.parallel([compilePug, styles, scripts, copyLibsLocal, images, fonts, svg]),
+    gulp.parallel([compilePug, styles, scripts, copyLibsLocal, copyFiles, images, fonts, svg]),
     server    
 )
 
 export const production = gulp.series(
     clean,
-    gulp.parallel([compilePug, styles, scripts, copyLibsLocal, images, fonts, svg]),
+    gulp.parallel([compilePug, styles, scripts, copyLibsLocal, copyFiles, images, fonts, svg]),
     server
 )
 
