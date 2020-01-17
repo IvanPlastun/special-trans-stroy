@@ -1,0 +1,31 @@
+.certificate {
+    @include section-indents(5em, 0em);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../assets/img/backgrounds/certificate.jpg) no-repeat center center;
+    background-size: cover;
+    color: $white;
+
+    @media (min-width: 1200px) {
+        @include section-indents(7em, 1em);
+    }
+
+    &-head {
+        margin-bottom: 2em;
+
+        &__title {
+            @include font-size(2.5em);
+        }
+    }
+
+    &-item {
+        margin-bottom: 1.5em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
