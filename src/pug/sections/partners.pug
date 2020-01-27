@@ -1,0 +1,50 @@
+section.partners
+    .container
+        h2.partners__title.wow.fadeIn(data-wow-delay="0.2s") Нам #[span.text-color-primary доверяют]
+        
+        div(id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel")
+
+            //- div(class="controls-top")
+            //-     a(class="btn-floating" href="#multi-item-example" data-slide="prev") #[i(class="fas fa-chevron-left")]
+            //-     a(class="btn-floating" href="#multi-item-example" data-slide="next") #[i(class="fas fa-chevron-right")]
+
+            ol(class="carousel-indicators")
+                li(data-target="#multi-item-example" data-slide-to="0" class="active")
+                li(data-target="#multi-item-example" data-slide-to="1")
+            div(class="carousel-inner" role="listbox")
+                //- First slide
+                div(class="carousel-item active")
+                    div(class="col-md-4 carousel-item-block")
+                        img.partners-img(data-partner="stroytransgaz" src="./assets/img/partners/logo-stroytransgaz.png" alt="Партнер Стройтрансгаз")
+                    div(class="col-md-4 carousel-item-block")
+                        img.partners-img(data-partner="rosneft" src="./assets/img/partners/logo-rosneft.png" alt="Партнер Роснефть")
+                    div(class="col-md-4 carousel-item-block")
+                        img.partners-img(data-partner="transneft" src="./assets/img/partners/logo-transneft.png" alt="Партнер Транснефть")
+
+                //- Second slide
+                div(class="carousel-item")
+                    div(class="col-md-4 carousel-item-block")
+                        img.partners-img(data-partner="stroygazmontazh" src="./assets/img/partners/logo-stroygazmontazh.png" alt="Партнер Стройгазмонтаж")
+                    div(class="col-md-4 carousel-item-block")
+                        img.partners-img(data-partner="velesstroy" src="./assets/img/partners/logo-velesstroy.png" alt="Партнер Велесстрой")
+                    div(class="col-md-4 carousel-item-block")
+                        img.partners-img(data-partner="gazstroyproekt" src="./assets/img/partners/logo-gazstroyproekt.png" alt="Партнер Газстройпроект")
+
+
+<!--/.Carousel Wrapper-->
+
+        //- .partners-img-wrapper
+        //-     .row.align-center.align-items-center.justify-content-between.py-4.text-center.wow.fadeInUp(data-wow-delay="0.2s")
+        //-         .col-xl-4.col-lg-4.col-md-4.col-sm-12.col-12.pb-3
+        //-             img.partners-img(data-partner="stroytransgaz" src="./assets/img/partners/logo-stroytransgaz.png" alt="Партнер Стройтрансгаз")
+        //-         .col-xl-4.col-lg-4.col-md-4.col-sm-12.col-12.pb-3
+        //-             img.partners-img(data-partner="rosneft" src="./assets/img/partners/logo-rosneft.png" alt="Партнер Роснефть")
+        //-         .col-xl-4.col-lg-4.col-md-4.col-sm-12.col-12.pb-3
+        //-             img.partners-img(data-partner="transneft" src="./assets/img/partners/logo-transneft.png" alt="Партнер Транснефть")
+        //-     .row.align-center.align-items-center.justify-content-between.text-center.wow.fadeInUp(data-wow-delay="0.4s")
+        //-         .col-xl-4.col-lg-4.col-md-4.col-sm-12.col-12.pb-3
+        //-             img.partners-img(data-partner="stroygazmontazh" src="./assets/img/partners/logo-stroygazmontazh.png" alt="Партнер Стройгазмонтаж")
+        //-         .col-xl-4.col-lg-4.col-md-4.col-sm-12.col-12.pb-3
+        //-             img.partners-img(data-partner="velesstroy" src="./assets/img/partners/logo-velesstroy.png" alt="Партнер Велесстрой")
+        //-         .col-xl-4.col-lg-4.col-md-4.col-sm-12.col-12
+        //-             img.partners-img(data-partner="gazstroyproekt" src="./assets/img/partners/logo-gazstroyproekt.png" alt="Партнер Газстройпроект")
