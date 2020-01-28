@@ -27,3 +27,7 @@
 @function num($input){ 
   @return $input/($input * 0 + 1); 
 }
+
+@mixin section-indents ($val_one, $val_two) {
+    padding: $val_one $val_two;
+}
