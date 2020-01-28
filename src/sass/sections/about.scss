@@ -1,0 +1,32 @@
+.about {
+    @include section-indents(5em, 0em);
+    
+    color: $white;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../assets/img/backgrounds/about-background-2.jpg) no-repeat center center;
+    background-size: cover;
+    @media (min-width: 1200px) {
+        @include section-indents(7em, 0em);
+    }
+
+    p {
+        @include font-size(1.2em);
+    }
+
+    &__title {
+        @include font-size(2.5em);
+    }
+
+    &-price-list {
+        padding-left: 1.0625em;
+
+        li {
+            margin-bottom: .625em;
+
+            &:Last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    
+}
