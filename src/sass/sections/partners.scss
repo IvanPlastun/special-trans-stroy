@@ -1,0 +1,35 @@
+.partners {
+    @include section-indents(5em, 0em);
+
+    @media (min-width: 1200px) {
+        @include section-indents(7em, 1em);
+    }
+
+    &__title {
+        @include font-size(2.5em);
+        color: $dark-blue;
+    }
+
+    &-img {
+        filter: grayscale(100%);
+        max-height: 6em;
+        // max-width: 10em;
+        max-width: 10em;
+        cursor: pointer;
+
+        &:hover {
+            filter: grayscale(0%);
+        }
+    }
+}
+
+.carousel-item-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7.5em;
+
+    @media (min-width: 768px) {
+        height: 9em;
+    }
+}
