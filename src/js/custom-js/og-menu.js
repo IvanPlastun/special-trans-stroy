@@ -9,3 +9,5 @@ $($navToggler).on("click", function () {
         this.classList.remove("is-active")
     }
 })
+
+$('.carousel').carousel()
