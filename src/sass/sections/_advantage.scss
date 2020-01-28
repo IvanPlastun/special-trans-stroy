@@ -1,0 +1,77 @@
+.advantage {
+    @include section-indents(5em, 0em);
+
+    @media (min-width: 1200px) {
+        @include section-indents(7em, 1em);
+    }
+}
+
+.advantage__title {
+    @include font-size(2.5em);
+    color: $dark-blue;
+}
+
+.advantage__subtitle {
+    @include font-size(1.3em);
+    margin-bottom: 2em;
+
+    @media (min-width: 768px) {
+        @include font-size(1.625em);
+    }
+}
+
+.advantage-about__first {
+    margin-bottom: 2em;
+}
+
+.advantage-about__second {
+    margin-bottom: 2em;
+}
+
+.advantage-count {
+    @include font-size(3.375em);
+    color: $first-yellow;
+}
+
+.advantage-desc {
+    @include font-size(1.625em);
+}
+
+.icon-vehicle {
+    height: 1.5em;
+    vertical-align: bottom;
+    padding: .2em;
+}
+
+.form-special-offer {
+    display:none;
+
+    @media (min-width: 992px) {
+        display: block;
+    }
+}
+
+.advantage-form-content {
+    padding: 3.2rem 1.5rem;
+}
+
+.advantage-button {
+    font-family: $font-family-futurapt;
+    font-weight: $font-weight-black;
+    margin: 0;
+    background: none;
+    border: .2em solid;
+    border-color: $first-yellow;
+    transition: all 0.3s;
+
+    &:hover {
+        background: $first-yellow;
+        color: $dark-blue;
+    }
+}
+
+.section-stripe {
+    height: 6em;
+    width: 100%;
+    background: url("../assets/img/backgrounds/section-stripe.png") repeat-x left center;
+}

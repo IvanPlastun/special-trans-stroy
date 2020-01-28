@@ -1,0 +1,54 @@
+section#advantage.advantage
+    .container
+        h2.advantage__title Наши #[span.highlight преимущества]
+        p.advantage__subtitle О компании «СпецТрансСтрой» в цифрах
+        #advantage-about.row.advantage-about
+            .col-xl-8.col-lg-8.col-md-12.col-sm-12.col-12.advantage-about__pb
+                
+                #advantage-about__first.row.advantage-about__first
+                    .col-xl-6.col-lg-6.col-md-12.col-sm-12.col-12
+                        .advantage-count от #[span.text-color-primary 600] ₽
+                        .advantage-desc За одну тонну гравия
+                    .col-xl-6.col-lg-6.col-md-12.col-sm-12.col-12
+                        .advantage-count #[img.icon-vehicle(src="./assets/img/backgrounds/excavator-ico.png")]
+                        .advantage-desc Большой ассортимент добываемых материалов
+                
+                #advantage-about__second.row.advantage-about__second
+                    .col-xl-6.col-lg-6.col-md-12.col-sm-12.col-12
+                        .advantage-count #[img.icon-vehicle(src="./assets/img/backgrounds/road-ico.png")]
+                        .advantage-desc Асфальтированная дорога до самого карьера
+                    .col-xl-6.col-lg-6.col-md-12.col-sm-12.col-12
+                        .advantage-count #[span.text-color-primary 24]/#[span.text-color-primary 7]
+                        .advantage-desc Отгрузка круглосуточно по весам
+
+                #advantage-about__third.row.advantage-about__third
+                    .col-xl-6.col-lg-6.col-md-12.col-sm-12.col-12
+                        .advantage-count 8 #[span.text-color-primary лет]
+                        .advantage-desc Успешной работы на всей территории России и СНГ
+                    .col-xl-6.col-lg-6.col-md-12.col-sm-12.col-12
+                        .advantage-count #[img.icon-vehicle(src="./assets/img/backgrounds/sale-ico.png")]
+                        .advantage-desc Для постоянных клиентов делаем хорошие скидки
+
+            .col-xl-4.col-lg-4.col-md-12.col-sm-12.col-12
+                form.form-special-offer(name="form__special_offer")
+                    .card.card-image(style='background-image: url("./assets/img/backgrounds/stripes-bg.jpg");')
+                        .text-white.rgba-indigo-light.advantage-form-content.z-depth-2
+                            .text-center
+                                h3.mb-5 #[strong СПЕЦИАЛЬНОЕ] #[span.text-color-secondary #[strong ПРЕДЛОЖЕНИЕ]]
+                                span.form-subject.dn Специальное предложение
+                            .md-form
+                                input.input_name.form-control.white-text(type="text" name="name" data-validate autocomplete="off")
+                                label Имя
+                            .md-form
+                                input.input_tel.form-control.white-text(type="text" name="tel" data-validate autocomplete="off")
+                                label Телефон
+                            .form-check.mb-3
+                                input.form-check-input(id="special-offer-agree" type="checkbox" name="privacyPolicy" required)
+                                label.form-check-label.white-text.advantage-form__checklabel(for="special-offer-agree") Я согласен на обработку #[a.text-color-secondary(href="./assets/docs/personal_data.pdf" rel="nofollow noopener" target="_blank") персональных данных]
+                            .row.d-flex.align-items-center
+                                .text-center.col-md-12
+                                    .form__errors.mb-3
+                                    input(type="hidden" name="specialoffer")
+                                    button.btn.btn-block.z-depth-1.waves-effect.waves-light.advantage-button.form-submit(disabled) Получить
+                                    //- input(name="recaptcha_response" type="hidden" id="special-offer")
+.section-stripe

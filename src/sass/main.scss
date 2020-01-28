@@ -4,10 +4,13 @@
 @import "base/base";
 @import "base/fonts";
 @import "base/custom-animations";
-
+@import "utils/utils";
 // Blocks
 
 
 // Sections
 @import "sections/header";
+@import "sections/advantage";
+@import "sections/about";
 @import "sections/certificate";
+@import "sections/partners";
