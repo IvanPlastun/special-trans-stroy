@@ -6,6 +6,10 @@ html {
 	font-family: $font-family-futurapt-book;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+
+    a:hover {
+        color: $first-yellow;
+    }
 }
 
 body {
@@ -105,4 +109,57 @@ button {
 
 .form-check a:hover {
     opacity: .65;
+}
+
+.text-color-primary {
+    color: $first-yellow;
+}
+
+.pc {
+    color: $first-yellow;
+}
+
+.pbc {
+    background-color: $first-yellow;
+    color: $black;
+}
+
+.sc {
+    color: $gray !important;
+}
+
+.discount {
+    @include font-size(2em);
+}
+
+.btn.btn-primary {
+    background-color: $first-yellow !important;
+    color: $black;
+    font-weight: 700;
+    padding: 1em 4em;
+
+    &:hover {
+        background-color: $black!important;
+        color: $first-yellow;
+    }
+}
+
+.secondary-color {
+    background-color: $first-yellow !important;
+}
+
+.btn-secondary {
+    background-color: $first-yellow !important;
+}
+
+.btn-secondary:not([disabled]):not(.disabled):active {
+    background-color: #4285f4 !important;
+}
+
+.carousel-multi-item .carousel-indicators li {
+    background-color: $first-yellow;
+}
+
+.carousel-multi-item .carousel-indicators .active {
+    background-color: $first-yellow;
 }
