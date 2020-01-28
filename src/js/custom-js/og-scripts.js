@@ -163,15 +163,15 @@ $(document).ready(function() {
             }
 
             for (const error of errors) {
-                parents.find(".form__errors").append(`<p>${error.description}</p>`)
+                parents.find(".form-errors").append(`<p>${error.description}</p>`)
             }
         }
 
         sendDataToServer()
         function sendDataToServer () {
             $data.subject = createStringWithDate(parents)
-            parents.find(".form__errors").css({display: "block", opacity: 1})
-            parents.find(".form__errors").empty()
+            parents.find(".form-errors").css({display: "block", opacity: 1})
+            parents.find(".form-errors").empty()
 
             parents.find("input, textearea").each(function() {
                 if (!$(this).data("activates")) $data[this.name] = $(this).val()
@@ -201,7 +201,7 @@ $(document).ready(function() {
                         if (data.checked_fields) {
                             parents.find("input").removeClass("invalid");
                             for (const message of data.errors) {
-                                parents.find(".form__errors").append(`<p>${message}</p>`).delay(2000).fadeOut(2000)
+                                parents.find(".form-errors").append(`<p>${message}</p>`).delay(2000).fadeOut(2000)
                                 $(".form-check-input:checked").prop("checked", false);
                                 $("button.form-submit,input.form-submit").attr("disabled","disabled")
                                 parents.find("input, textarea").each(function (index, item) {
@@ -219,7 +219,7 @@ $(document).ready(function() {
                             }
                         } else {
                             for (const error of data.errors) {
-                                parents.find('.form__errors').append($(`<p>${error}</p>`).delay(500).slideDown(300))
+                                parents.find('form-errors').append($(`<p>${error}</p>`).delay(500).slideDown(300))
                             }
     
                             for (const invalid of data.invalid_fields) {
