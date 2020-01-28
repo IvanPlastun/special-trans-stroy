@@ -1,0 +1,29 @@
+.discount-box {
+    @include section-indents(5em, 0em);
+
+    @media (min-width: 1200px) {
+        @include section-indents(7em, 1em);
+    }
+
+    &__title {
+        color: $dark-blue;
+        @include font-size(2.5em);
+    }
+
+    &__subtitle {
+        @include font-size(1.3em);
+        padding-bottom: 0.1em;
+    }
+
+    &__sale {
+        @include font-size(4em);
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
