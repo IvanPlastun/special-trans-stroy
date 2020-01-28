@@ -32,3 +32,5 @@ $(".nav-filter-wrapper li").on("click", event => {
         $(event.target).addClass("selected")
     }
 })
+
+$('.carousel').carousel()

@@ -23,7 +23,7 @@ const paths = {
         libs: "./src/libs/**/*.*",
         files: {
             docs: "./src/assets/docs/*.*",
-            img: "./src/libs/img/**/*.*"
+            img: "./src/libs/img/**/*.{jpg,jpeg,png,gif,tiff,svg}"
         }
     },
     dist: {
