@@ -1,0 +1,9 @@
+- const filterInfo = {titles: [{sand: "Песок", active: true}, "Гравий", "Щебень", "ЩГПС", "ПГС", "Камень бутовый"]}
+
+mixin filterProducts(data)
+    ul.nav.nav-filter-list.md-pills.flex-wrap.mx-0.mb-5(role="tablist")
+        li.nav-item.product-filter-item.placeholder
+            a.nav-link.font-weight-bold.text-uppercase(href="#!" data-type="Выбрать") Выбрать
+        each title, index in data.titles
+            li.nav-item.product-filter-item
+                a.nav-link.nav-link--indents.font-weight-bold.text-uppercase(class=(data.titles[index].active) ? 'active' : '' data-type=`"${(title.active) ? `${title.sand}` : `${title}`}"`  href=`#panel-${parseInt(index) + 1}` data-toggle="tab" role="tab")= (title.active) ? `${title.sand}` : `${title}`
