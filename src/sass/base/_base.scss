@@ -6,6 +6,10 @@ html {
 	font-family: $font-family-futurapt-book;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+
+    a:hover {
+        color: $first-yellow;
+    }
 }
 
 body {
