@@ -5,7 +5,10 @@
 @import "base/fonts";
 @import "base/custom-animations";
 @import "utils/utils";
+
 // Blocks
+@import "blocks/modalOrder.scss";
+@import "blocks/modalDiscountOrder.scss";
 
 // Sections
 @import "sections/header";

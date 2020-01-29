@@ -1,0 +1,30 @@
+div.modal-dialog.modal-side.modal-bottom-right.modal-notify#modalOrderDiscounted(role="document")
+    .modal-wrapper
+        form#form-order(name="form-order" method="POST")
+            div.modal-content
+                div.modal-header.modal-header--background
+                    p.heading.font-weight-bold.text-uppercase.form-subject Оформление заказа со скидкой дня
+                    button.close(type="button" data-dismiss="modal" aria-label="Закрыть")
+                        span.white-text(aria-hidden="true") &times;
+                div.modal-body.pt-2.pb-2.pl-2.pr-2
+                    div.row.mx-2
+                        div
+                            div.md-form
+                                input.input_name.form-control(type="text" name="name" data-validate autocomplete="off")
+                                label Имя
+                            div.md-form
+                                input.input_tel.form-control(type="text" name="tel" data-validate autocomplete="off")
+                                label Телефон
+                            div.md-form
+                                input.input_items.form-control(type="text" name="items" disabled="disabled" value="Гравий фракции 5х20")
+                                label Продукция со скидкой
+                            div.form-check.mb-1
+                                input.input_policy.form-check-input(type="checkbox" name="privacyPolicy" id="checkbox9" required)
+                                label.form-check-label.advantage-form__checklabel(for="checkbox9")
+                                    span(class="text-color__black") Я согласен на обработку 
+                                    a.highlight(href="./assets/docs/personal_data.pdf" rel="nofollow noopener" target="_blank") персональных данных	
+                            div.form-errors.text-center.mb-3
+                            div.row.d-flex.align-items-center
+                                div.text-center.col-md-12
+                                    input.btn.btn-primary.form-submit(name="order-discount" type="submit" value="Заказать")
+                                    //- input(type="hidden" name="recaptcha_response" id="order-with-discount-day")                           
