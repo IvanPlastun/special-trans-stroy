@@ -110,16 +110,8 @@ button {
     color: $dark-blue;
 }
 
-.text-color-secondary {
-    color: $first-yellow;
-}
-
 .form-check a:hover {
     opacity: .65;
-}
-
-.text-color-primary {
-    color: $first-yellow;
 }
 
 .pc {
@@ -169,4 +161,8 @@ button {
 
 .carousel-multi-item .carousel-indicators .active {
     background-color: $first-yellow;
+}
+
+.carousel-multi-item {
+    margin-bottom: 0;
 }
