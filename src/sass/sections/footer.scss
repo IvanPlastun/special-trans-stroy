@@ -1,0 +1,101 @@
+.footer {
+    @include section-indents(5em, 0em);
+    color: $white;
+    @include font-size(1.125em);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.6)), url("../assets/img/backgrounds/quarry.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-width: 1200px) {
+        padding: 7em 0em 3em;
+    }
+
+    a {
+        color: #fff;
+        transition: 0.3s ease-in;
+    }
+
+    &__contacts {
+        padding-bottom: 3em;
+
+        @media (min-width: 1200px) {
+            padding-bottom: 5em;
+        }
+    }
+
+    &__info {
+        margin-bottom: 4em;
+        @include font-size(.75em);
+
+        @media (min-width: 576px) {
+            @include font-size(1em);
+        }
+
+        @media (min-width: 992px) {
+            margin-bottom: 0;
+        }
+    }
+
+    &-contact-list {
+        @include font-size(1.25em);
+        padding-top: 2em;
+        list-style-type: none;
+        line-height: 1;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: .45em;
+
+            i {
+                color: $light-gray;
+            }
+
+            &-icon {
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+
+            &-info {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding-left: .67em;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    &__map {
+        height: 350px;
+        border: .35em dashed #ffcd11; // FIXME: установить important если не будет работать
+
+        &-frame {
+            border: .35em dashed #ffcd11;
+        }
+    }
+
+    &__copyrights {
+        text-align: center;
+
+        &--indents {
+            margin-bottom: .5em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @media (min-width: 1200px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.footer .footer-contact-list__button:hover {
+    background: #fff !important;
+    color: #1e2344;
+}

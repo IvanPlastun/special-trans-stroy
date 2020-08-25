@@ -1,0 +1,28 @@
+.feedback#feedback
+    .container
+        .row.align-center.align-items-center.justify-content-between
+            .col-lg-6.col-md-6.col-12
+                h2.feedback__title.wow.fadeIn(data-wow-delay="0.2s") Не знаете, что выбрать?
+                p.feedback__subtitle Мы всегда на связи — #[span.pc напишите нам]
+            .feedback-form-wrapper.col-lg-6.col-md-6.col-12.pc
+                form.feedback-contact-form(name="feedback-contact-form")
+                    .card.card-image
+                        .feedback-contact-form-content.z-depth-2
+                            .text-center
+                                h3.mb-5.mt-4 #[strong МЫ] #[span.text-color-secondary #[strong ПЕРЕЗВОНИМ]]
+                                span.form-subject.dn МЫ ПЕРЕЗВОНИМ
+                            .md-form
+                                input.form-control.feedback__input(type="text" name="name" data-validate id="feedback-name" autocomplete="off")
+                                label.feedback__label Имя
+                            .md-form
+                                input.input-phone.form-control.feedback__input(type="text" name="tel" data-validate id="feedback-phone" autocomplete="off")
+                                label.feedback__label Телефон
+                            .form-check.mb-4
+                                input.form-check-input(type="checkbox" name="privacyPolicy" id="checkbox2" required)
+                                label.form-check-label.white-text.feedback__checklabel(for="checkbox2") Я согласен на обработку #[a.text-color-secondary(href="./assets/docs/personal_data.pdf" role="nofollow noopener" target="_blank") персональных данных]
+                            .row.d-flex.align-items-center
+                                .text-center.col-md-12
+                                    .form-errors.mb-3
+                                    input(type="hidden" name="feedback")
+                                    button.btn.btn-primary.form-submit(type="button" disabled) Отправить
+                                    input(type="hidden" name="recaptcha-response" id="recaptcha-info")

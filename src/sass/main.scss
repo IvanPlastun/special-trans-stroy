@@ -4,9 +4,19 @@
 @import "base/base";
 @import "base/fonts";
 @import "base/custom-animations";
+@import "utils/utils";
 
 // Blocks
-
+@import "blocks/modalOrder.scss";
 
 // Sections
 @import "sections/header";
+@import "sections/advantage";
+@import "sections/product";
+@import "sections/feedback";
+@import "sections/discount";
+@import "sections/about";
+@import "sections/gallery";
+@import "sections/certificate";
+@import "sections/partners";
+@import "sections/footer";

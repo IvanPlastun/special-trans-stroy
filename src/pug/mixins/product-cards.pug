@@ -1,0 +1,24 @@
+-const cardsData = [{active: true,items: [{id: 0,description: "Мк 2,5мм-3мм. Кф более 4 м/сут.",link: "<a href class=\"sc\">Песок <span class=\"pc\">мытый</span></a>",imgUrl: "./assets/img/products/sand/pesok__mitiy.jpg",price: 80}, {id: 1,description: "Мк 2,5мм-3мм. Кф более 4 м/сут.",link: "<a href class=\"sc\">Песок <span class=\"pc\">сеяный</span></a>",imgUrl: "./assets/img/products/sand/pesok__seyaniy.jpg",price: 60}]}, {items: [{id: 0, description: "", link: "<a href class=\"sc\">Гравий фракции <span class=\"pc\">5х20</span> (мытый)</a>", imgUrl: "./assets/img/products/gravel/graviy-520.jpg", price: "750"}, {id: 1, description: "", link: "<a href class=\"sc\">Гравий фракции <span class=\"pc\">5х20</span> (сеяный)</a>", imgUrl: "./assets/img/products/gravel/graviy-520.jpg", price: "650"}, {id: 2, description: "", link: "<a href class=\"sc\">Гравий фракции <span class=\"pc\">20x40</span></a>", imgUrl: "./assets/img/products/gravel/graviy-240.jpg", price: "650"}, {id: 3, description: "", link: "<a href class=\"sc\">Гравий фракции <span class=\"pc\">40х70</span></a>", imgUrl: "./assets/img/products/gravel/graviy-4070.jpg", price: "600"}]}, {items: [{id : 0, description: "", link: "<a href class=\"sc\">Щебень гравийный фракции <span class=\"pc\">5х20</span></a>", imgUrl: "./assets/img/products/gravel-crushed-stone/gravel-crushed-stone520.jpg", price: "950"}, {id: 1, description: "", link: "<a href class=\"sc\">Щебень гравийный фракции <span class=\"pc\">20х40</span></a>", imgUrl: "./assets/img/products/gravel-crushed-stone/gravel-crushed-stone2040.jpg", price: "850"}]}, {items: [{id: 0, description: "", link: "<a href class=\"sc\">ЩГПС <span class=\"pc\">С-4</span></a>", imgUrl: "./assets/img/products/SGPS/sgps4.jpg", price: "700"}, {id: 1, description: "", link: "<a href class=\"sc\">ЩГПС <span class=\"pc\">С-5</span></a>", imgUrl: "./assets/img/products/SGPS/sgps4.jpg", price: "700"}, {id: 2, description: "", link: "<a href class=\"sc\">ЩПС <span class=\"pc\">С-4</span></a>", imgUrl: "./assets/img/products/SGPS/crushed-stone-sandC4.jpg", price: "700"}, {id: 3, description: "", link: "<a href class=\"sc\">ЩПС <span class=\"pc\">С-5</span></a>", imgUrl: "./assets/img/products/SGPS/crushed-stone-sandC5.jpg", price: "700"}]}, {items: [{id: 0, description: "", link: "<a href class=\"sc\">ПГС <span class=\"pc\"></span></a>", imgUrl: "./assets/img/products/PGS/pgs.jpg", price: "150"}]}, {items: [{id: 0, description: "", link: "<a href class=\"sc\">Камень бутовый фракции <span class=\"pc\">80х150</span></a>", imgUrl: "./assets/img/products/rubble-stone/rubble-stone80150.jpg", price: ""}, {id: 1, description: "", link: "<a href class=\"sc\">Камень бутовый фракции <span class=\"pc\">20х150</span></a>", imgUrl: "./assets/img/products/rubble-stone/rubble-stone20150.jpg", price: ""}]}]
+
+mixin productCards(cardInfo)
+    - for (index in cardInfo)
+        .tab-pane.fade.show.in(class=`${(cardInfo[index].active) ? "active" : ""}` id=`panel-${parseInt(index) + 1}` role="tabpanel")
+            .row.cards-position
+                - for (let i = 0, length = cardInfo[index].items.length; i < length; i++)
+                    .card-wrapper.col-lg-4.col-md-6
+                        .card.card-cascade.card-ecommerce
+                            .view.overlay.z-depth-1.zoom.p-4
+                                img.img-fluid(src=cardInfo[index].items[i].imgUrl)
+                                a
+                                    .mask.rgba-white-slight
+                            .card-body.product-card-body.card-body-cascade.text-center
+                                h4.card-title #[strong !{cardInfo[index].items[i].link}]
+                                .card-footer
+                                    span
+                                        if (cardInfo[index].items[i].price != "")
+                                            span.discount #{cardInfo[index].items[i].price}₽ тонна
+                                        else
+                                            span.discount договорная
+                                    if (cardInfo[index].items[i].description.length !== 0)
+                                        p.description.text-center #{cardInfo[index].items[i].description}
+                                    button.btn.btn-primary.mt-3(type="button" data-id=`${index}_${cardInfo[index].items[i].id}` data-toggle="modal" data-target="#modalOrder") Купить

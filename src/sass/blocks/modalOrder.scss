@@ -1,0 +1,43 @@
+.modal-dialog {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .87);
+    margin: 0;
+    max-width: 100%;
+    min-height: 100%;
+    z-index: 99999;
+    overflow-x: hidden;
+    overflow-y: auto;
+    pointer-events: all;
+    padding: 0 15px;
+
+    label {
+        @include font-size(1em);
+        color: $black;
+    }
+}
+
+.modal-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.modal-content {
+    max-width: 350px;
+}
+
+
+.modal-header--background {
+    background-color: $first-yellow;
+}
+
+.md-form input[type=number]:focus:not([readonly]) {
+    box-shadow: 0 1px 0 0 #ffce00;
+    border-bottom: 1px solid #ffce00;
+}

@@ -6,6 +6,10 @@ html {
 	font-family: $font-family-futurapt-book;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+
+    a:hover {
+        color: $first-yellow;
+    }
 }
 
 body {
@@ -18,7 +22,15 @@ html,
 body, 
 header,  
 .jarallax {
-	height: 100%;
+    max-height: 100%;
+    
+    @media (min-width: 992px) {
+        height: 100%;
+    }
+}
+
+html a:hover {
+    color: $first-yellow;
 }
 
 h1, 
@@ -36,15 +48,18 @@ h6 {
 p {
     margin: 0;
 }
+
 a {
 	-webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
+
 ul {
     padding: 0;
     margin: 0;
 }
+
 button {
     cursor: pointer;
 }
@@ -56,14 +71,17 @@ button {
 .text-color-secondary {
     color: $first-yellow;
 }
+
 .md-form label {
     color: $white;
 }
+
 .md-form input[type=text]:focus:not([readonly]) {
     -webkit-box-shadow: 0 1px 0 0 $second-yellow;
     box-shadow: 0 1px 0 0 $second-yellow;
     border-bottom: 1px solid $second-yellow;
 }
+
 .md-form input[type=date]:focus:not([readonly])+label,
 .md-form input[type=datetime-local]:focus:not([readonly])+label,
 .md-form input[type=email]:focus:not([readonly])+label,
@@ -79,7 +97,87 @@ button {
     color: $second-yellow
 }
 
+.modal-body .md-form input[type=date]:focus:not([readonly])+label,
+.modal-body .md-form input[type=datetime-local]:focus:not([readonly])+label,
+.modal-body .md-form input[type=email]:focus:not([readonly])+label,
+.modal-body .md-form input[type=number]:focus:not([readonly])+label,
+.modal-body .md-form input[type=password]:focus:not([readonly])+label,
+.modal-body .md-form input[type=search-md]:focus:not([readonly])+label,
+.modal-body .md-form input[type=search]:focus:not([readonly])+label,
+.modal-body .md-form input[type=tel]:focus:not([readonly])+label,
+.modal-body .md-form input[type=text]:focus:not([readonly])+label,
+.modal-body .md-form input[type=time]:focus:not([readonly])+label,
+.modal-body .md-form input[type=url]:focus:not([readonly])+label,
+.modal-body .md-form textarea.md-textarea:focus:not([readonly])+label {
+    color: $black;
+}
+
 .form-check-input[type=checkbox]:checked+label:before, label.btn input[type=checkbox]:checked+label:before {
     border-right: 2px solid $first-yellow;
     border-bottom: 2px solid $first-yellow;
+}
+
+.highlight {
+    color: $first-yellow;
+}
+
+.text-color-primary {
+    color: $dark-blue;
+}
+
+.form-check a:hover {
+    opacity: .65;
+}
+
+.pc {
+    color: $first-yellow;
+}
+
+.pbc {
+    background-color: $first-yellow;
+    color: $black;
+}
+
+.sc {
+    color: $gray !important;
+}
+
+.discount {
+    @include font-size(2em);
+}
+
+.btn.btn-primary {
+    background-color: $first-yellow !important;
+    color: $black;
+    font-weight: 700;
+    padding: 1em 4em;
+
+    &:hover {
+        background-color: $black!important;
+        color: $first-yellow;
+    }
+}
+
+.secondary-color {
+    background-color: $first-yellow !important;
+}
+
+.btn-secondary {
+    background-color: $first-yellow !important;
+}
+
+.btn-secondary:not([disabled]):not(.disabled):active {
+    background-color: #4285f4 !important;
+}
+
+.carousel-multi-item .carousel-indicators li {
+    background-color: $first-yellow;
+}
+
+.carousel-multi-item .carousel-indicators .active {
+    background-color: $first-yellow;
+}
+
+.carousel-multi-item {
+    margin-bottom: 0;
 }
